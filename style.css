@@ -376,7 +376,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 62vh;
+            height: 54vh;
         } .form_body .container > div {
             display: flex;
             flex-direction: column;
@@ -472,6 +472,7 @@
             margin: clamp(6rem, 10vw, 8rem) 0;
             font-weight: 100;
             font-size: clamp(0.8rem, 4.7vw, 1.4rem);
+            line-height: 1.4;
             text-align: center;
         } .input_boxes_ctnr {
             width: 100%;
