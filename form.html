@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OQVA Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form_body">
+
+    <section class="intro_sec">
+        <div class="container">
+            <div>
+                <img class="logo" src="assets/logo w.svg" alt="logo OQVA" draggable="false" oncontextmenu="return false">
+                <h1>This document will aid us in developing a clear understanding of your vision for this video.</h1>
+                <a href="#form">Let's start</a>
+            </div>
+        </div>
+        <div class="graphic01"></div>
+    </section>
+
+    <section class="form_section">
+
+        <form name="contact" method="POST" data-netlify="true" id="form">
+            <div class="primary_inputs">
+                <p>
+                    <label>
+                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="name" required/>
+
+                        <span class="over_label">Name</span>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="customer-success-manager" required/>
+
+                        <span class="over_label">Costumer Success Manager</span>
+                    </label>
+                </p>
+            </div>
+
+            <span class="divider_info">Don't skimp on information. Fill in the columns and after being sure, press yes and you will have sent.</span>
+
+            <div class="input_boxes_ctnr">
+                <p>
+                    <label>
+                        
+                        <span><b>1.</b> What are you using this video for?</span>
+                        
+                        <textarea name="01-what-are-you-using-this-video-for" spellcheck="false"></textarea>
+                    
+                    </label>
+                </p>
+
+                
+                <p>
+                    <label>
+                        
+                        <span><b>2.</b> What are you looking to achieve with this video content?</span>
+                        
+                        <textarea name="02-what-are-you-looking-to-achieve-with-this-video-content" spellcheck="false"></textarea>
+                    
+                    </label>
+                </p>
+            </div>
+
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+    </section>
+</body>
+</html>
