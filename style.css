@@ -376,7 +376,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 54vh;
+            height: calc(100vh - 102vw);
         } .form_body .container > div {
             display: flex;
             flex-direction: column;
