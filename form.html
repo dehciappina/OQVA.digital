@@ -35,9 +35,9 @@
 
                 <p>
                     <label>
-                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="customer-success-manager" required/>
+                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="company-name" required/>
 
-                        <span class="over_label">Costumer Success Manager</span>
+                        <span class="over_label">Company</span>
                     </label>
                 </p>
             </div>
@@ -47,22 +47,38 @@
             <div class="input_boxes_ctnr">
                 <p>
                     <label>
-                        
                         <span><b>1.</b> What are you using this video for?</span>
                         
                         <textarea name="01-what-are-you-using-this-video-for" spellcheck="false"></textarea>
-                    
                     </label>
                 </p>
-
                 
                 <p>
                     <label>
-                        
                         <span><b>2.</b> What are you looking to achieve with this video content?</span> 
                         
-                        <textarea name="02-what-are-you-looking-to-achieve-with-this-video-content" spellcheck="false"></textarea>
+                        <textarea name="02-what-are-you-looking-to-achieve" spellcheck="false"></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>3.</b> How long do you want the video to be?</span> 
+                        
+                        <textarea name="03-video-length" spellcheck="false"></textarea>
                     
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>4.</b> What dimensions do you want the video in?</span> 
+                        
+                        <select name="04-video-dimensions">
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Landscape</option>
+                            <option value="portrait-and-landscape">Both</option>
+                        </select>
                     </label>
                 </p>
             </div>

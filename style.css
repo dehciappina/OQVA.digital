@@ -443,13 +443,13 @@
         } .primary_inputs label {
             position: relative;
             display: block;
-            background-color: #21212180;
+            background-color: #131313;
             transition: background-color 0.2s ease;
             border-radius: 0.5rem;
             border: 1px solid #232323;
-            background-image: linear-gradient(180deg, #111, #0000 62%);
+            background-image: linear-gradient(180deg, #0E0E0E, #0000 62%);
         } .primary_inputs label:hover {
-            background-color: var(--c2);
+            background-color:#171717;
         } .primary_inputs input {
             font-size: clamp(0.9rem, 5.5vw, 1.6rem);
             padding-left: 1rem;
@@ -480,11 +480,12 @@
             flex-direction: column;
             gap: 3rem;
         } .input_boxes_ctnr > p {
-            border: 0.15rem solid var(--c1);
+            border: 0.1rem solid #888;
             border-radius: 0.7rem;
             line-height: 1.3;
             box-sizing: border-box;
             overflow: hidden;
+            box-shadow: 0 0.9rem 0.8rem -0.4rem #141414;
         } .input_boxes_ctnr > p:hover label span {
             background-color:#0a0a0a;
         } .input_boxes_ctnr input {
@@ -496,7 +497,7 @@
             display: block;
             padding: 0.9rem 0.8rem 0.7rem 1.6rem;
             font-size: clamp(0.8rem, 4.7vw, 1.3rem);
-            border-bottom: 0.15rem solid var(--c1);
+            border-bottom: 0.1rem solid #888;
             font-weight: 200;
             transition: background-color 0.1s ease-out;
         }
@@ -511,16 +512,14 @@
             font-size: clamp(0.8rem, 4.7vw, 1.2rem);
             position: relative;
             line-height: 1.3;
+            background-image: linear-gradient(0deg, #0C0C0C, #0000 24%);
         } textarea::-webkit-resizer {
             position: absolute;
             bottom:2rem;
             right:2rem;
             width: 3rem;
             height:3rem;
-            background-image: repeating-linear-gradient(135deg, transparent, transparent 0.2rem, white 0.2rem, white 0.3rem);
-            border-left: 0.15rem solid var(--c1);
-            border-top: 0.15rem solid var(--c1);
-            border-radius: 0.3rem 0 0 0;
+            background-image: repeating-linear-gradient(135deg, transparent, transparent 0.15rem, white 0.15rem, white 0.2rem);
           }
         
         
