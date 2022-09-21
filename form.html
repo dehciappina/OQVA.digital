@@ -7,6 +7,8 @@
     <title>OQVA Digital</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" defer></script>
 </head>
 <body class="form_body">
 
@@ -15,7 +17,7 @@
             <div>
                 <img class="logo" src="assets/logo w.svg" alt="logo OQVA" draggable="false" oncontextmenu="return false">
                 <h1>This document will aid us in developing a clear understanding of your vision for this video.</h1>
-                <a href="#form">Let's start</a>
+                <a href="#briefing-form">Let's start</a>
             </div>
         </div>
         <div class="graphic01"></div>
@@ -23,15 +25,25 @@
 
     <section class="form_section">
 
-        <form name="contact" method="POST" data-netlify="true" id="form">
+        <form name="contact" method="POST" data-netlify="true" id="briefing-form">
             <div class="primary_inputs">
-                <p>
-                    <label>
-                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="name" required/>
-
-                        <span class="over_label">Name</span>
-                    </label>
-                </p>
+                <div class="row_inputs">
+                    <p>
+                        <label>
+                            <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="first-name" id="first-name-id" required/>
+    
+                            <span class="over_label">First name</span>
+                        </label>
+                    </p>
+    
+                    <p>
+                        <label>
+                            <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="surname" required/>
+    
+                            <span class="over_label">Surname</span>
+                        </label>
+                    </p>
+                </div>
 
                 <p>
                     <label>
@@ -47,46 +59,106 @@
             <div class="input_boxes_ctnr">
                 <p>
                     <label>
-                        <span><b>1.</b> What are you using this video for?</span>
+                        <span><b>1.</b> What are you using this content for?</span>
                         
-                        <textarea name="01-what-are-you-using-this-video-for" spellcheck="false"></textarea>
+                        <textarea name="01-what-are-you-using-this-content-for" spellcheck="false"></textarea>
                     </label>
                 </p>
                 
                 <p>
                     <label>
-                        <span><b>2.</b> What are you looking to achieve with this video content?</span> 
+                        <span><b>2.</b> What is important to you from this content?</span> 
                         
-                        <textarea name="02-what-are-you-looking-to-achieve" spellcheck="false"></textarea>
+                        <textarea name="02-what-is-important-to-you-from-this-content" spellcheck="false"></textarea>
                     </label>
                 </p>
                 
                 <p>
                     <label>
-                        <span><b>3.</b> How long do you want the video to be?</span> 
+                        <span><b>3.</b> What are you looking to achieve with this content?</span> 
                         
-                        <textarea name="03-video-length" spellcheck="false"></textarea>
-                    
+                        <textarea name="03-what-are-you-looking-to-achieve-with-this-content" spellcheck="false"></textarea>
                     </label>
                 </p>
                 
                 <p>
                     <label>
-                        <span><b>4.</b> What dimensions do you want the video in?</span> 
+                        <span><b>4.</b> What is the message you want to relay to the audience?</span> 
                         
-                        <select name="04-video-dimensions">
-                            <option value="portrait">Portrait</option>
-                            <option value="landscape">Landscape</option>
-                            <option value="portrait-and-landscape">Both</option>
-                        </select>
+                        <textarea name="04-what-is-the-message-you-want-to-relay-to-the-audience" spellcheck="false"></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>5.</b> What is the one action you want the audience to take from the video?</span> 
+                        
+                        <textarea name="05-what-is-the-one-action-you-want-the-audience-to-take-from-the-video" spellcheck="false"></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>6.</b> What platforms will you be using this video for?</span> 
+                        
+                        <textarea name="06-what-platforms-will-you-be-using-this-video-for" spellcheck="false"></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>6.</b> What platforms will you be using this video for?</span> 
+                        
+                        <textarea name="06-what-platforms-will-you-be-using-this-video-for" spellcheck="false"></textarea>
                     </label>
                 </p>
             </div>
 
             <p>
-              <button type="submit">Send</button>
+              <button type="submit">Submit</button>
             </p>
           </form>
     </section>
+
+    <script>
+        const handleSubmit = (e) => {
+        e.preventDefault();
+        let myForm = document.getElementById("briefing-form");
+        let formData = new FormData(myForm);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => success())
+            .catch((error) => alert(error));
+        };
+
+        function success() {
+            document.querySelector('.form_body button[type=submit]').innerHTML = 'Form successfully submitted!';
+
+        }
+
+        document.querySelector("form").addEventListener("submit", handleSubmit);
+
+
+
+
+        // const firstNameInput = document.getElementById('first-name-id')
+
+        // firstNameInput.oninput = function() {
+        //     localStorage.setItem('firstNameSaved', firstNameInput.getAttribute('value'));
+
+        //     console.log(firstNameInput.getAttribute('value'))
+        // }
+
+        // // let someData = 'The data that I want to store for later.';
+        // // localStorage.setItem('myDataKey', someData);
+
+        
+        // window.onload = function() {
+        //     // firstNameInput.value = localStorage.getItem('myDataKey');
+        // }
+    </script>
 </body>
 </html>

@@ -376,7 +376,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 102vw);
+            height: calc(100vh - 115vw);
+            min-height: clamp(45vh, 60vw, 60vh);
         } .form_body .container > div {
             display: flex;
             flex-direction: column;
@@ -385,14 +386,15 @@
             width: clamp(13rem, calc(30vw + 20vh), 23rem);
         } .form_body .container a {
             position: relative;
-            align-self: flex-start;
             font-weight: 600;
             font-size: clamp(0.7rem, 4vw, 1.2rem);
             padding-right: 1rem;
+            transition: text-shadow 0.2s ease-in-out;
+        } .form_body .container a:hover {
+            text-shadow: 0 0 0.4rem #666;
         } .form_body .container a::after {
             content: '';
             position: absolute;
-            right: 0.5rem;
             width: 0.3rem;
             height: 0.3rem;
             border-right: 0.15rem solid var(--c1);
@@ -411,12 +413,16 @@
             background-repeat: no-repeat;
         } 
 
+        form p {
+            width: 100%;
+        }
+
         .form_section {
             min-height: 100rem;
             display: flex;
             justify-content: center;
         } .form_section form {
-            padding-top: clamp(1rem, 20vh, 12rem);
+            padding-top: clamp(1rem, 14vh, 12rem);
             width: clamp(14rem, 80vw, 70rem);
             display: flex;
             flex-direction: column;
@@ -455,7 +461,12 @@
             padding-left: 1rem;
             cursor: text;
         } .primary_inputs p:focus-within .over_label, input:not([value=""]) + .over_label {
-            transform: translateX(0.6rem) translateY(-2.6rem) scale(0.7);
+            transform: translateX(0.6rem) translateY(-2.7rem) scale(0.75);
+        } .primary_inputs .row_inputs {
+            display: flex;
+            flex-direction: row;
+            gap:1rem;
+            justify-content: stretch;
         } .over_label {
             position: absolute;
             color: var(--c1);
@@ -495,7 +506,7 @@
             flex-direction: column;
         } .input_boxes_ctnr label span {
             display: block;
-            padding: 0.9rem 0.8rem 0.7rem 1.6rem;
+            padding: 0.9rem 1.5rem 0.7rem 1.6rem;
             font-size: clamp(0.8rem, 4.7vw, 1.3rem);
             border-bottom: 0.1rem solid #888;
             font-weight: 200;
@@ -507,7 +518,7 @@
             width:100%;
             max-width: 100%;
             min-height: 8rem;
-            height: 12rem;
+            height: 10rem;
             max-height: 50rem;
             font-size: clamp(0.8rem, 4.7vw, 1.2rem);
             position: relative;
@@ -527,7 +538,22 @@
             outline:none;
         }
 
-
+        .form_body button[type=submit] {
+            width: 100%;
+            margin: 4rem 0 8rem 0;
+            padding: 0.9rem 0 0.6rem;
+            font-weight: 900;
+            font-family: 'BrilkSans';
+            border-radius: 0.4rem;
+            background-color: var(--c1);
+            border: unset;
+            box-shadow: 0 0.6rem 0.8rem -0.6rem;
+            line-height: 1.2;
+            font-size: clamp(0.8rem, 4.7vw, 1.2rem);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
 
 
